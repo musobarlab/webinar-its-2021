@@ -1,0 +1,12 @@
+################### Auth Module Area
+type Auth {
+    login(username: String!, password: String!): User
+}
+
+type User {
+    id: Int!
+    username: String!
+    password: String!
+    name: String!
+    token: String!
+}

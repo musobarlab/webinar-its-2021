@@ -1,0 +1,16 @@
+[Unit]
+Description=webinar api
+Documentation=https://gitlab.com/Wuriyanto/go-codebase
+After=network.target
+
+[Service]
+EnvironmentFile=/home/ubuntu/go-codebase/.env
+Type=simple
+User=ubuntu
+ExecStart=/home/ubuntu/go-codebase/go-codebase-linux
+StandardOutput=file:/var/log/webinar-api.log
+StandardError=file:/var/log/webinar-api-error.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
